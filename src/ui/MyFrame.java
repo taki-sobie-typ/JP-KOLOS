@@ -13,6 +13,7 @@ public class MyFrame extends JFrame {
 
         Canva canva = new Canva();
         this.add(canva, BorderLayout.CENTER);
+        new Thread(canva).start();
 
         MyPanel myPanel = new MyPanel(canva);
         this.add(myPanel, BorderLayout.SOUTH);

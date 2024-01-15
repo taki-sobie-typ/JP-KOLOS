@@ -12,7 +12,19 @@ public class Wire implements Runnable{
 
     @Override
     public void run(){
+        electricyPassing();
+    }
 
+    public void electricyPassing(){
+
+    }
+
+    public Point getStartPoint() {
+        return startPoint;
+    }
+
+    public Point getEndPoint() {
+        return endPoint;
     }
 
     public void draw(Graphics2D g2d){
