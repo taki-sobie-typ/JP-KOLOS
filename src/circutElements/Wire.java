@@ -1,5 +1,24 @@
 package circutElements;
 
-public class Wire {
-    private int xStart, yStart, xStop, yStop;
+import java.awt.*;
+
+public class Wire implements Runnable{
+    private Point startPoint, endPoint;
+
+    public Wire(Point startPoint, Point endPoint){
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
+
+    @Override
+    public void run(){
+
+    }
+
+    public void draw(Graphics2D g2d){
+        g2d.setStroke(new BasicStroke(3));
+        g2d.setColor(Color.BLUE);
+
+        g2d.drawLine(startPoint.x, startPoint.y, endPoint.x, endPoint.y);
+    }
 }

@@ -2,8 +2,9 @@ package circutElements;
 
 import java.awt.*;
 
-public class Dwojnik implements Runnable{
+public class Dwojnik extends Rectangle implements Runnable{
     private int x, y, width, height;
+    private boolean focus = false;
 
     public Dwojnik(int x, int y, int width, int height){
         this.x = x;
@@ -23,4 +24,7 @@ public class Dwojnik implements Runnable{
         g2d.drawRect(x,y,width,height);
     }
 
+    public void setFocus(boolean focus) {
+        this.focus = focus;
+    }
 }
